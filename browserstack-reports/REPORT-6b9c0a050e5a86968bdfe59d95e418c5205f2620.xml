@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Search_Wikipedia_Functionality">
+    <testcase name="can_find_search_results" id="Search_Wikipedia_Functionality.can_find_search_results{0}" index="0">
+      <session>6b9c0a050e5a86968bdfe59d95e418c5205f2620</session>
+      <projectType>APP_AUTOMATE</projectType>
+    </testcase>
+  </testsuite>
+</testsuites>
