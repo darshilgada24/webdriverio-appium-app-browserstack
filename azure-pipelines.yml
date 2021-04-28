@@ -12,16 +12,12 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '14.x'
   displayName: 'Install Node.js'
 
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStack connection'
-  
-- task: BrowserStackAppUploader@0
-  inputs:
-    appPath: '/home/vsts/work/1/s/WikipediaSample.apk'
 
 - script: |
     pwd 

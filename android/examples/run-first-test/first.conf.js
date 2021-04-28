@@ -1,6 +1,6 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || 'access_key',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'username',
+  user: 'darshilgada1',
+  key: 'fP6DdHuqEjCUEmnvJmz7',
 
   updateJob: false,
   specs: [
@@ -9,12 +9,12 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android',
+    project: "Test node js report",
+    build: 'Test node js report',
     name: 'Azure test',
     device: 'Google Pixel 3',
     os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID || 'app_url',
+    app: 'bs://24066b2934ed9885f2e4d3282d9bb49105060e51',
     'browserstack.debug': true
   }],
   
