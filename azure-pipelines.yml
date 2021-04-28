@@ -15,17 +15,16 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
-- task: BrowserStackConfig@0
+- task: browserstackcom.browserstack-vsts-extension.browserstack-config-task.BrowserStackConfig@0
+  displayName: 'BrowserStack configuration setup'
   inputs:
-    BrowserStackServiceEndPoint: 'BrowserStack connection'
+    BrowserStackServiceEndPoint: Test
 
 - script: |
-    pwd 
-    ls
-    echo $BROWSERSTACK_APP_ID
-    cd android/
     npm install
     npm run first
   displayName: 'npm i and run the WDIO test on AA'
 
-- task: BrowserStackResults@0
+- task: browserstackcom.browserstack-vsts-extension.reports-task.BrowserStackResults@0
+  displayName: 'BrowserStack Results.'
+  continueOnError: true
