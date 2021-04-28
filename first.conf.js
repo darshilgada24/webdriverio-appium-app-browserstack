@@ -1,22 +1,29 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+  user: 'darshilgada1',
+  key: 'fP6DdHuqEjCUEmnvJmz7',
 
   updateJob: false,
   specs: [
-    './examples/run-multiple-test/specs/multiple_test.js'
+    './first_test.js'
   ],
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Multiple',
-    name: 'multiple_test',
+    project: "Test node js report",
+    build: 'Test node js report',
+    name: 'Azure test',
     device: 'Google Pixel 3',
     os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+    app: 'bs://24066b2934ed9885f2e4d3282d9bb49105060e51',
     'browserstack.debug': true
   }],
+  
+  reporters: ["browserstack"],
+  reporterOptions: {
+    browserstack: {
+      outputDir: "./"
+    }
+  },
 
   logLevel: 'info',
   coloredLogs: true,
@@ -29,6 +36,6 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 30000
+    timeout: 20000
   }
 };

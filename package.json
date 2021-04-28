@@ -5,10 +5,7 @@
   "description": "Selenium examples for WebdriverIO and BrowserStack App Automate",
   "scripts": {
     "test": "npm run first && npm run local && npm run parallel",
-    "first": "./node_modules/.bin/wdio examples/run-first-test/first.conf.js",
-    "parallel": "./node_modules/.bin/wdio examples/run-parallel-test/parallel.conf.js",
-    "local": "./node_modules/.bin/wdio examples/run-local-test/local.conf.js",
-    "multiple": "./node_modules/.bin/wdio examples/run-multiple-test/multiple.conf.js"
+    "first": "./node_modules/.bin/wdio first.conf.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +27,6 @@
     "@wdio/mocha-framework": "^5.18.7",
     "browserstack-local": "^1.4.5",
     "@wdio/reporter": "7.5.2",
-    "wdio-browserstack-reporter": "^1.0.0"
+    "wdio-browserstack-reporter": "browserstack/wdio-browserstack-reporter#wdio5"
   }
 }
