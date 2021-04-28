@@ -21,9 +21,6 @@ steps:
     BrowserStackServiceEndPoint: Test
 
 - script: |
-    pwd 
-    ls
-    cd android/
     npm install
     npm run first
   displayName: 'npm i and run the WDIO test on AA'
