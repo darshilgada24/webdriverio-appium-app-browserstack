@@ -8,16 +8,24 @@ exports.config = {
   ],
   exclude: [],
 
-  capabilities: [{
-    project: "Test node js report",
-    build: 'Test node js report',
-    name: 'Azure test',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
+  maxInstances: 10,
+  commonCapabilities: {
+    project: "First Webdriverio Android Project",
+    build: 'Webdriverio Android Parallel',
+    name: 'parallel_test',
+    realMobile: true,
     app: 'bs://24066b2934ed9885f2e4d3282d9bb49105060e51',
     'browserstack.debug': true
+  },
+
+  capabilities: [{
+    device: 'Google Pixel 3',
+    os_version: "9.0"
+  }, {
+    device: 'Samsung Galaxy S10e',
+    os_version: "9.0"
   }],
-  
+
   reporters: ["browserstack"],
   reporterOptions: {
     browserstack: {
@@ -39,3 +47,7 @@ exports.config = {
     timeout: 20000
   }
 };
+
+exports.config.capabilities.forEach(function(caps){
+  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
+});
